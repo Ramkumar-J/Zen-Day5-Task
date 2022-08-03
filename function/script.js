@@ -46,3 +46,50 @@ function checkPalindrom(str) {
 }
 const result = words.filter(e => checkPalindrom(e));
 console.log(result);
+
+
+// g. Remove duplicates from an array
+let chars = [2, 4, 6, 4, 6];
+let uniqueChars = [];
+chars.forEach(function (char){
+    if (!uniqueChars.includes(char)) {
+        uniqueChars.push(char);
+    }
+});
+
+console.log(uniqueChars);
+
+
+// const Arr = [1, 3, 6, 5, 4];
+// const rotatedArr = Arr.map((e, i) => Arr[Arr.length-i-1])
+// console.log(rotatedArr)
+
+// h. Rotate an array by k times
+let nums=[1,2,3,4,5]
+const rotateArray1 = function(nums, k) {
+
+  for (let i = 0; i < k; i++) {
+      nums.unshift(nums.pop());
+  }
+
+  return nums;
+}
+
+(nums,1);
+console.log(rotateArray1);
+
+let nums1=[1,2,3];
+let nums2=[4,5,6];
+let findMedian=(nums1,nums2) => {
+  let compare=(i,j) => {
+    return i-j;
+  }
+  let arr=nums1.concat(nums2).sort(compare);
+  if(arr.length % 2 ==0){
+    return(arr[arr.length/2 -1] + arr[arr.length/2]) / 2;
+  }
+  return arr[Math.floor(arr.length/2)];
+}
+
+(nums1,nums2);
+console.log(findMedian);
