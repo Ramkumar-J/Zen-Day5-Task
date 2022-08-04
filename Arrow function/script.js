@@ -12,12 +12,14 @@ let oddNumbers= (input) =>
 }
 oddNumbers(arr);
 
-// Convert all the strings to title caps in a string array
+// b. Convert all the strings to title caps in a string array
 let content=["cat","rat","rabit","lion"]
-function titleCase(str) {
-  return str=str.toLowerCase().split(' ');
+let titleCase = (str) => {
+  return (str = str.map((e) => 
+    e.toUpperCase()
+  ));
 }
-const result1 = content.map(e => checkPalindrom(e.charAt(0).toUpperCase() + e.slice(1)));
+const result1 = titleCase(content);
 console.log(result1);
 
 // c. Sum of all numbers in an array
@@ -41,5 +43,5 @@ let words=["ramar","raj","lol"]
 let checkPalindrom= (word) => { 
     return word == word.split('').reverse().join('');
 }
-const result = words.filter(word => checkPalindrom(word));
+const result = words.filter((word) => checkPalindrom(word));
 console.log(result);
